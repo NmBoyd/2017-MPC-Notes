@@ -1,0 +1,68 @@
+\ProvidesPackage{layout}
+
+%------------------------------------
+%  PACKAGES
+%------------------------------------
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{fancyhdr}	% Footer and header
+\usepackage[left=4mm, right=4mm, top=4mm, bottom=6mm, footskip=3.0mm]{geometry}
+%\usepackage{sectsty}	%For Section Header Formatting
+\usepackage{framed}
+\usepackage{hyperref} 
+\usepackage{bm}
+\usepackage{changepage}   % for the adjustwidth environment
+\usepackage{booktabs}
+%\usepackage{extsizes}
+%\usepackage[all=normal,paragraphs=normal,lists=tight]{savetrees}
+\usepackage{xargs} 
+
+%------------------------------------
+%  DOCUMENT CONFIGURATIONS
+%------------------------------------
+\setlength{\columnsep}{4mm}
+\setlength{\columnseprule}{0.2pt}
+\setlength{\parindent}{0pt}
+\setlength{\arraycolsep}{3pt}
+
+\makeatletter
+\g@addto@macro \normalsize {%
+ \setlength{\abovedisplayskip}{0pt plus 1pt}%
+ \setlength{\belowdisplayskip}{0pt plus 1pt}%
+ \setlength{\abovedisplayshortskip}{1pt plus 1pt minus 1pt}%
+ \setlength{\belowdisplayshortskip}{1pt plus 1pt minus 1pt}%
+}
+\makeatother
+
+%--Hyphenation--
+\hyphenpenalty=10000
+
+%-- Widows and Orphans
+\widowpenalty=50000
+\clubpenalty=50000
+
+%------------------------------------
+%  COLORS
+%------------------------------------
+\definecolor{myblue}{RGB}{40,126,224}
+\definecolor{myblue2}{RGB}{29,92,165}
+\definecolor{myblue3}{RGB}{22,71,129}
+\definecolor{dkblue}{RGB}{13,43,76}
+\definecolor{ltgrey}{RGB}{245,245,245}
+\definecolor{ltblue}{RGB}{240,248,255}
+\definecolor{ltyellow}{RGB}{255,255,215}
+\definecolor{dkpurple}{rgb}{0.314,0.086,0.769}
+\definecolor{dkgreen}{RGB}{34,139,34}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
